@@ -10,7 +10,7 @@ const Home = () => {
             .then(data => setArrayies(data))
     }, [])
     return (
-        <div>
+        <div className='container  mx-auto'>
             <div className=' mb-5'>
                 {
                     arrayies.map(single => <CategoryList
@@ -18,11 +18,13 @@ const Home = () => {
                     ></CategoryList>)
                 }
             </div>
+            <div className='grid grid-cols-2 gap-2'>
             {
                 arrayies.map(single => <FeatureJob
                     single={single}
                 ></FeatureJob>)
             }
+            </div>
 
 
         </div>

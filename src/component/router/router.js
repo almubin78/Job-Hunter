@@ -21,6 +21,12 @@ const router = createBrowserRouter([
                 path:'/statistics',
                 element:<Statistics></Statistics>
             }
+            ,
+            {
+                path:'/details/:id',
+                element:<Statistics></Statistics>,
+                loader:async({params})=>await fetch(`details/${params.id}`)
+            }
         ]
     }
 ])

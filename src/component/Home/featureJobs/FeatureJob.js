@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FeatureJob = ({ single }) => {
-    const { company, jobCategoryList } = single;
+    const {_id, company, jobCategoryList } = single;
     console.log(single);
     console.log('jobCList', jobCategoryList);
     return (
-        <div className='border'>
-            <h2>Company Name {company}</h2>
+        <div className='border '>
+            {/* <h2>Company Name {company}</h2> */}
             {jobCategoryList.map(s =>
                 <>
                     <div className="card w-96 bg-base-100 shadow-xl">
@@ -17,7 +18,7 @@ const FeatureJob = ({ single }) => {
                             <h2 className="card-title">{s.designation}</h2>
                             <p>{s.availableJob} Job Available</p>
                             <div className="card-actions">
-                                <button className="btn btn-primary">Buy Now</button>
+                                <Link to={`/details/${_id}`}>View Details</Link>
                             </div>
                         </div>
                     </div>
