@@ -9,21 +9,21 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setArrayies(data))
     }, [])
-    // console.log(arrayies);
-    // const {jobCategoryList} = arrayies
     return (
         <div>
+            <div className=' mb-5'>
+                {
+                    arrayies.map(single => <CategoryList
+                        single={single}
+                    ></CategoryList>)
+                }
+            </div>
             {
-                arrayies.map(single=><CategoryList
-                    single={single}
-                ></CategoryList>)
-            }
-            {
-                arrayies.map(single=><FeatureJob
+                arrayies.map(single => <FeatureJob
                     single={single}
                 ></FeatureJob>)
             }
-            
+
 
         </div>
     );

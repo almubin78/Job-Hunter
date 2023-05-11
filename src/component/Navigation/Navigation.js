@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './navigation.css'
 
 const Navigation = () => {
@@ -8,16 +8,20 @@ const Navigation = () => {
 
     }
     return (
-        <div>
-            <div className="logo"></div>
-            <div className="linkSection">
+        <div className='navbar'>
+            <div className="navbar-start">
+                <button className='btn' as={Link} to='/dd'>Job Market Place</button>
+            </div>
+            <div className="navbar-center hidden lg:flex">
                 <NavLink style={(isActive)=>{return {color:isActive ?' ':''}}} to='/'>Home</NavLink>
                 {/* <NavLink style={(isActive)=>{return {color:isActive ?' ':''}}} to='/'>Home</NavLink> */}
                 <NavLink style={linkStyle} to='/statistics'>Statistic</NavLink>
                 <NavLink style={linkStyle} to='/details'>Details</NavLink>
                 <NavLink style={linkStyle} to='/'>Applied Jobs</NavLink>
             </div>
-            <div className="btn"></div>
+            <div className="navbar-end">
+                <button className='btn btn-'>Apply Now</button>
+            </div>
         </div>
     );
 };
