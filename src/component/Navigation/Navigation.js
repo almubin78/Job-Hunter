@@ -15,7 +15,7 @@ const Navigation = () => {
                 {/* <NavLink style={(isActive)=>{return {color:isActive ?' ':''}}} to='/'>Home</NavLink> */}
                 <NavLink style={linkStyle} to='/statistics'>Statistic</NavLink>
                 <NavLink style={linkStyle} to='/details'>Details</NavLink>
-                <NavLink style={linkStyle} to='/d'>Applied Jobs</NavLink>
+                <NavLink style={linkStyle} to='/'>Applied Jobs</NavLink>
             </div>
             <div className="btn"></div>
         </div>
