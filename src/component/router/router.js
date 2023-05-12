@@ -13,19 +13,23 @@ const router = createBrowserRouter([
                 path:'/',
                 element:<Home></Home>
             },
-            {
-                path:'/details',
-                element:<JobDetails></JobDetails>
-            },
+            // {
+            //     path:'/details',
+            //     element:<JobDetails></JobDetails>
+            // },
             {
                 path:'/statistics',
                 element:<Statistics></Statistics>
             }
             ,
             {
+                
                 path:'/details/:id',
-                element:<Statistics></Statistics>,
-                loader:async({params})=>await fetch(`details/${params.id}`)
+                element:<JobDetails></JobDetails>,
+                loader:async({params})=>{
+                    await fetch(`/details/${params.id}`);
+                    return await fetch('data.json')
+                }
             }
         ]
     }
