@@ -16,7 +16,7 @@ const Home = () => {
         <div className='container  mx-auto'>
             <Header></Header>
             
-            <div className=' mb-10'>
+            <div className='m mb-10 grid 2xl:grid-cols-4 md:grid-cols-2 xl:grid-cols-3 gap-4'>
                 {
                     arrayies.map(single => <CategoryList
                         single={single}
