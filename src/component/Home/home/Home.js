@@ -15,22 +15,28 @@ const Home = () => {
     return (
         <div className='container  mx-auto'>
             <Header></Header>
-            
-            <div className='m mb-10 grid 2xl:grid-cols-4 md:grid-cols-2 xl:grid-cols-3 gap-4'>
-                {
-                    arrayies.map(single => <CategoryList
-                        single={single}
-                    ></CategoryList>)
-                }
+
+            <div className='mt-10 mb-10'>
+                <h3 className='text-2xl text-center'>Category List</h3>
+                <hr />
+                <div className=' grid 2xl:grid-cols-4 md:grid-cols-2 xl:grid-cols-3 gap-4'>
+
+                    {
+                        arrayies.map(single => <CategoryList
+                            single={single}
+                        ></CategoryList>)
+                    }
+                </div>
             </div>
-            <h3 className=''>Featured Jobs</h3>
-            <p className=' mb-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-            <div className='grid grid-cols-2 gap-2 '>
-            {
-                arrayies.map(single => <FeatureJob
-                    single={single}
-                ></FeatureJob>)
-            }
+            <h3 className='text-2xl text-center'>Featured Jobs</h3>
+            <hr />
+            <p className=' mb-5 mt-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+            <div className='grid md:grid-cols-2 gap-2 mb-10'>
+                {
+                    arrayies.map(single => <FeatureJob
+                        single={single}
+                    ></FeatureJob>)
+                }
             </div>
 
 

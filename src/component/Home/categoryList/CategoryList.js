@@ -9,7 +9,7 @@ const CategoryList = ({ single }) => {
             {
                 jobCategoryList.map(s =>
 
-                    <div className=' p-4'>
+                    <div className=' p-4 mx-auto'>
                         <div className="card w-96 bg-base-100 shadow-xl image-full">
                             <figure><img className='ax-h-52' src={s.logo} alt="img not get" /></figure>
                             <div className="card-body">
