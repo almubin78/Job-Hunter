@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 
 const Home = () => {
     const [arrayies, setArrayies] = useState([]);
+    // console.log(arrayies);
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())

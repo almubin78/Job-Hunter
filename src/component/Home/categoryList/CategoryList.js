@@ -1,9 +1,8 @@
 import React from 'react';
 
 const CategoryList = ({ single }) => {
-    // console.log(single.jobCategoryList);
     const { jobCategoryList } = single
-    console.log(jobCategoryList)
+    
     return (
         <>
             {
